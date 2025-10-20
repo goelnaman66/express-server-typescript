@@ -5,6 +5,9 @@ import v2Router from './routers/v2/index.router';
 
 const app = express();
 
+app.use(express.json()); // Middleware to parse JSON bodies
+
+
 // registering all the routers and their corresponding handlers
 // app.use(pingRouter);
 app.use('/api/v1', v1Router);
